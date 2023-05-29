@@ -7,7 +7,11 @@ export interface IDateProps {
   nurse_id: string;
 }
 
-export const useDaySchedule = ({ nurse_id }) => {
+export interface IRequestProps {
+  nurse_id: string;
+}
+
+export const useDaySchedule = ({ nurse_id }: IRequestProps) => {
   const [daysSchedule, setDaysSchedule] = useState<IDateProps[]>([]);
   const [loading, setLoading] = useState(false);
 

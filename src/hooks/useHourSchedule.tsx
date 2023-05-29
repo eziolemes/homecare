@@ -6,7 +6,11 @@ export interface IHourProps {
   date_id: string;
 }
 
-export const useHourSchedule = ({ date_id }) => {
+export interface IRequestProps {
+  date_id: string;
+}
+
+export const useHourSchedule = ({ date_id }: IRequestProps) => {
   const [hoursSchedule, setHoursSchedule] = useState<IHourProps[]>([]);
   const [loading, setLoading] = useState(false);
 

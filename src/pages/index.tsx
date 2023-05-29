@@ -26,13 +26,13 @@ export default function Home() {
   const [selectedHourSchedule, setSelectedHourSchedule] = useState('');
   const [imagem, setImagem] = useState('/nurses/2d72b61caf25f10344c3dc954c7fa714-download.jpeg');
 
-  const handleService = async (event) => {
+  const handleService = async (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedService(event.target.value);
     setSelectedNurse("1");
     setImagem(nurses[0].photo_path);
   }
 
-  const handleNurse = (event) => {
+  const handleNurse = (event: React.ChangeEvent<HTMLSelectElement>) => {
     nurses.map((item) => {
       if (item.id === selectedNurse) {
         console.log("entrou no if")
@@ -43,11 +43,11 @@ export default function Home() {
     setSelectedNurse(event.target.value);
   }
 
-  const handleDaySchedule = (event) => {
+  const handleDaySchedule = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedDaySchedule(event.target.value);
   }
 
-  const handleHourSchedule = (event) => {
+  const handleHourSchedule = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedHourSchedule(event.target.value);
   }
 

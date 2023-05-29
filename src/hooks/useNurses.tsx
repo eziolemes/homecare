@@ -11,7 +11,11 @@ export interface INurseProps {
   service_id: string;
 }
 
-export const useNurses = ({ serviceId }) => {
+export interface IRequestProps {
+  serviceId: string;
+}
+
+export const useNurses = ({ serviceId }: IRequestProps) => {
   const [nurses, setNurses] = useState<INurseProps[]>([]);
   const [loading, setLoading] = useState(false);
 
@@ -41,7 +45,7 @@ export const useNurses = ({ serviceId }) => {
           id: "2",
           name: "ENFª MELISSA PENTEADO",
           instruction: "TÉCN. ENFERMAGEM",
-          photo_path: "/nurses/fdfa385963ffbeb8fd8107741d57f620-1678395908843.jpeg",
+          photo_path: "/nurses/560x1343-1.png",
           service_id: "2"
         },
         {
